@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <style>
+        
+
+        .main { 
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            height: 80px;
+        }
+
+        
+
+        .main li {
+            text-decoration: none;
+            font-size: 18px;
+            color:white;
+            margin-right: 35px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: relative;
+            
+            list-style: none;
+            display: inline ;
+            
+
+        }
+
+
+
+        .main li::after {
+
+            content: "";
+            position: absolute;
+            height: 5px;
+            top:100%;
+            left: 0%;
+            background-color: white;
+            width: 0;
+            transition: .4s;
+            margin: 10px 0px;
+            
+        }
+
+            
+        .main li:hover::after { width: 100%;}
+
+        .main li a{ text-decoration: none; color: white;}
+
+        .main li .dropdown {display: none;
+            position: absolute;
+            top:160%;
+            left:0;
+            background-color: black;
+            padding: 10px 50px;
+        }
+
+        .main li:hover .dropdown{ display: block;}
+
+        .main li .dropdown li .dropdown1{display: none;
+            position: absolute;
+            top:0%;
+            left:20%;
+            background-color: black;
+            padding: 10px 50px;
+        }
+
+        .main li:hover .dropdown li:hover .dropdown1{ display: block;}
+        
+        
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#">Men's Wear</a>
+
+                <ul class="dropdown">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a>
+                        <ul class="dropdown1">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Women's Wear</a></li>
+            <li><a href="#">Short Codes</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>
